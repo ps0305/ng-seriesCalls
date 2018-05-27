@@ -9,7 +9,7 @@ export class CustomerService {
   constructor(private _http:Http) {
 
    }
-   public getCostomer():any{
+   public getCustomer():any{
      return this._http.get("https://www.w3schools.com/angular/customers.php")
      //catching positive response
     .map((res:Response)=>{
