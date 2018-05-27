@@ -4,13 +4,13 @@ import 'rxjs/Rx';//map,catch,throw function are available in this package
 import { Observable } from 'rxjs/Observable';//Observable=> To throw the error
 
 @Injectable()
-export class CustomerService {
+export class CountriesService {
   //create instance to http,technically called dependency injection
   constructor(private _http:Http) {
 
    }
    public getCountries():any{
-     return this._http.get("https://www.w3schools.com/angular/customers.php")
+     return this._http.get("https://restcountries.eu/rest/v2/all")
      //catching positive response
     .map((res:Response)=>{
       return res.json();
